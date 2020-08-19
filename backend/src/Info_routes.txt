@@ -1,0 +1,18 @@
+//dentro do routes tem get,post,put,delete
+
+/*('/') -> Rota que será utilizada
+ * (req -> representa a requisição, através dele vou pegar qualquer tipo de paramentro que o usuario estiver enviando na requisição
+    ,res ->serve para devolver uma reposta para a requisição enviada pelo req
+ */
+
+    //return -> retornar algo
+    //res.send -> Envia um texto 
+    //('Hello World')-> Mensagem
+    //return res.send('Hello World');
+    //res.json -> Envia um json
+    //message: -> objeto com uma propriedade de mensagem
+    //"Hello World" -> Valor
+    /* req.query = Acessar query params (para filtros)
+       req.params = Acessar route params (para edição, delete)
+       req.body = Acessar corpo da requisição( para criação, edição)
+     */ 

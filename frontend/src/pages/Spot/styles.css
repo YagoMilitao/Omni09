@@ -1,0 +1,28 @@
+label#thumbnail{
+    margin-bottom: 20px;
+    border: 1px dashed #ddd;
+    background-size: cover;
+    cursor: pointer;
+    height: 160px;
+
+    /* para o icone da camera fique centralizada dentro da label*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label#thumbnail input{
+/* para o input não aparecer*/
+    display: none;
+}
+
+/* Se tiver imagem de preview*/
+label#thumbnail.has-thumbnail {
+    /* Tirar borda pontilhada da imagem de preview*/
+    border: 0;
+}
+/* Se tiver imagem de preview*/
+label#thumbnail.has-thumbnail img{
+    /* Tirar icone de camera do meio do campo de foto já com o preview de fundo(imagem de fundo e icone sobreposto, ele tira esse icone)*/
+    display: none;
+}

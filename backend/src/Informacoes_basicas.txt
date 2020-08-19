@@ -1,0 +1,21 @@
+No insomnia -> 
+  "--v" é o contador do registro, ele diz quantas vezes o registro foi atualizado
+
+usuario criador do spot
+  "_id": "5f25e78a253f96290cac8358",
+  "email": "yagolano@hotmail.com",
+
+
+
+
+  usuario que faz reserva
+  "_id": "5f29737707993439308de7b5",
+  "email": "yagomilitao@outlook.com"
+
+
+
+  yarn add init-y
+  qndo instala a primeira dependencia  o node_modules instala automaticamente
+  
+
+CORS: serve para dar acesso ao backend pelo front

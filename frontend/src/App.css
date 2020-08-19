@@ -1,0 +1,123 @@
+/* Resetando o CSS*/
+
+/* importando fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+*{
+  margin: 0;
+  padding:0;
+  outline: 0;
+  box-sizing: border-box;
+}
+/*tags que estarao por volta da aplicação*/
+html, body, #root{
+  /*altura minima, para o fundo ocupar a tela toda, se nao fizer isso
+  nao da para colocar um background que ocupe o fundo todo  */
+  min-height: 100%;
+}
+
+body{
+  /*                    */
+  background: #000 url('./assets/background.jpg');
+                   /*imagem ocupe toda a tela, cubra toda a tela, el vai se adaptar automaticamente*/
+  background-size: cover;
+  /*deixa a fonte mais detalhada*/
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body, input, button{
+  /*importando a fonte
+          se nao for Roboto é a próxima*/
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/*esse container serve para deixar tudo no centro da tela*/
+.container{
+  /*margen de 80 pixels do topo da pagina
+                direita e esquerda auto significa que automaticamente
+                o conteudo ficará no centro da tela(horizontalmente)*/
+  margin: 80px  auto 0;
+  /*largura máxima para o conteudo*/
+  max-width:450px;
+  /*largura máxima para o conteudo*/
+  width: 100%;
+  /*largura máxima para o conteudo*/
+  display: flex;
+  /*Para a logo e o conteudo ficarem um abaixo do outro
+    alinhamento em colunas*/
+  flex-direction: column;
+  /*Para a logo e o conteudp ficarem no centro*/
+  align-items: center;
+}
+
+.content{
+  /*Largura de 100%*/
+  width: 100%;
+  background: #FFF ;
+  /*top para distanciar da logo  50 pixels*/
+  margin-top: 50px;
+  border-radius: 4px;
+  /*Espaçamento interno*/
+  padding: 30px;
+}
+/*etilizar primeiro <p> que vem dentro do content
+utilizado para que se tiver outro p na página não sofrer as mesmas alterações*/
+.content >p {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+/*estilizar o formulário*/
+.content form{
+  display: flex;
+  flex-direction: column;
+}
+
+.content form label span{
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+}
+
+.content form label{
+  font-size: 14px;
+  color: #444;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.content form input {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  height: 45px;
+  /* para bota só nas laterais*/
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+/*BOTÃO */
+.content button.btn{
+  /*retirar a borda padrão */
+  border:0;
+  /*arredondar os cantos */
+  border-radius: 2px;
+  /*Ocupar toda largura possivel */
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f05a5b;
+  color: #FFF;
+  /*Altera estilo do cursor do mouse ao passar por cima */
+  cursor: pointer;
+}
+
+/* qndo o usuario passar o mouse por cima*/
+.content button.btn:hover {
+  background: #e14f50;
+ 
+}

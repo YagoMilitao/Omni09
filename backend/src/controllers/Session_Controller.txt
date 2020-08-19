@@ -1,0 +1,23 @@
+Para testar e ver se SessionController está funcionando:
+na SessionController.js:
+ module.exports ={
+    store(req, res){
+        return res.json({ message: 'Hello World'});
+    }
+};
+
+na routes.js:
+  const SessionController = require ('./controllers/SessionController');
+  routes.post('/sessions', SessionController.store);
+
+no insomnia:
+    http://localhost:3333/sessions
+    ROTA POST
+    {
+        "nome": "Yago",
+        "email": "yagolano@hotmail.com"
+    }
+tem que aparecer 
+{
+    "message": "Hello World"
+}

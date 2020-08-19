@@ -1,0 +1,10 @@
+//Text-> texto, mesma coisa </p> <strong> </h1> se quiser um pouco diferente tem que estilizar
+//View-> igual a <div> do HTML, serve para criar caixa, container na aplicacação
+import { StyleSheet, Text, View } from 'react-native';
+para navegação adicionar yarn add react-navigation
+
+//            lib de gestos                     animação na navegação
+expo install react-native-gesture-handler react-native-reanimated 
+
+//para fazer a comunicação com o back
+yarn add axios

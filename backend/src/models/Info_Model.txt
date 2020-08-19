@@ -1,0 +1,5 @@
+Models -> tabelas no banco de dados
+Representa uma endidade ma aplicação
+
+Particularidades:
+Letra maiúscula no começo e palavra no singular

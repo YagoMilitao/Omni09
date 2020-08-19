@@ -1,0 +1,6 @@
+Controller -> Regras de negócio da aplicação
+
+vai receber a requisição, tratar a requisição e devolver uma resposta
+
+
+Tudo que for relacionado a sessão estará na SessionController

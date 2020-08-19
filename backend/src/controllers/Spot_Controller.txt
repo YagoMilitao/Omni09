@@ -1,0 +1,52 @@
+Testar Spot controller
+no SpotController.js:
+ const { store } = require("./SessionController");
+
+module.exports = {
+    async store(req, res){
+        //log no body e no file para ver como está chega do
+        // console.log(req.body);
+        //console.log(req.file);
+        return res.json({ ok: true})
+    }
+};
+
+no routes.js:
+  const SpotController = require ('./controllers/SpotController');
+  routes.post('/spots', SpotController.store);
+
+
+no insomnia
+ http://localhost:3333/spots
+    ROTA POST
+    {
+        //não passar nada no body
+    }
+
+    tem que aparecer 
+{
+    "ok": true
+}
+
+*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+JSON não suporta envio de imagens
+por isso no insomnia passar Multipart Form
+name                        value
+thumbnail                   File //escolher arquivo
+company                     RocketSeat //nome da companhia
+price                       68 //preço do spot 
+techs                       ReactJS,React Native,Node.js
+
+
+depois 
+na guia Header
+New Header                  New Value
+user_id                        id do usuario que foi criado na Session 
+
+
+para eu filtrar por tecnologia
+GET 
+http://localhost:3333/spots
+ABA Query
+New name                    New Value
+tech                        //nome da tecnologia 

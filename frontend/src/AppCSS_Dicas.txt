@@ -1,0 +1,7 @@
+Importar fontes:
+nome da fonte ->google fonts->tamanho que quer(pode ser mais de uma fonte)-> +select this style 
+ ->embed->@import -> copia -> cola no CSS tirando a tag <style> -> coloca dentro do body e onde mais quiser ex:
+                    body{
+                        font-family: 'Roboto';
+                    }
+                    /*Roboto é a fonte baixada do google*/

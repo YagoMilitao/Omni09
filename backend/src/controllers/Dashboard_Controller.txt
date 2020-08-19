@@ -1,0 +1,30 @@
+Testar Dashboard controller
+
+no DashboardController.js
+const Spot = require('../models/Spot');
+
+module.exports= {
+    async show(req,res) {
+ 
+     const { user_id } = req.headers;
+
+     const spots = await Spot.find({ user: user_id });
+
+     return res.json(spots);
+    }
+}
+
+
+no routes.js
+const DashboardController = require ('./controllers/DashboardController');
+routes.get('/dashboard', DashboardController.show);
+
+no insomnia
+ http://localhost:3333/dashboard
+    ROTA GET
+    {
+        //não passar nada no body
+    }
+    ABA Header 
+    New Header                  New Value
+    user_id                     id do usuario que foi criado na Session 

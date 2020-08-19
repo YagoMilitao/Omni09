@@ -1,0 +1,40 @@
+Testar Booking controller
+
+no BookingController.js
+const Booking = require('../models/Booking')
+
+module.exports ={
+
+    async store(req, res){
+        const { user_id } = req.headers;
+        const { spot_id } = req.params;
+        const {date} = req.body
+
+        const booking = await Booking.create({
+            user: user_id,
+            spot: spot_id,
+            date,
+        });
+        
+        return res.json(booking);
+    }
+};
+
+
+no routes.js
+const BookingController = require ('./controllers/BookingController');
+routes.post('/spots/:spot_id/bookings', BookingController.store);
+
+no insomnia
+ http://localhost:3333/spots/id_do_spot_que_deseja_fazer_reserva/bookings
+    ROTA GET
+    {
+        "date": //data que deseja fazer a resrva
+    }
+    ABA Header 
+    New Header                  New Value
+    user_id                     id do usuario que foi criado na Session(diferente dos outros, esse usuario vai fazer uma reserva, no exemplo fez outro usuario) 
+
+
+
+id_do_spot_que_deseja_fazer_reserva-> pega o id desse spot em Spot/index vai retorna o id daquele spot criado (não confundir id do spot com usuario)

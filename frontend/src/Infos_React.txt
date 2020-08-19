@@ -1,0 +1,12 @@
+Componentes:É uma funcão (){
+    que retorna um HTML
+}
+
+para fazer chamadas a API utiliza-se o AXIOS
+
+Estado: Qualquer info q iremos armazenar dentro de um componente ex:
+listagem de usuarios. Essa listagem de usuarios vem de uma api, haverá uma requisição para essa api, vai ter o retorno dessa listagem
+e precisara armazenar essa lista solicitada em algum lugar  para mostrar em tela, então toda informação q será manipulada dentro de um componente será mantida
+no estado do componente 
+
+react-router-dom : para utilizar rotas no react

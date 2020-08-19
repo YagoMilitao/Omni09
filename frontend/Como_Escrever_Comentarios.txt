@@ -1,0 +1,61 @@
+Comentario no REACT                                                             No CSS
+                                                                                /* coentario aqui*/
+                                                                                    body {
+                                                                                            margin: 2px;
+                                                                                }
+                                                                                /*comenttario*/
+
+
+var Span = React.createClass({
+    render: function() {
+        return (
+            <span style={{color: this.props.color}}>
+                {this.props.text}
+            </span>
+        );
+    }
+});
+
+
+var Hello = React.createClass({
+    render: function() {
+        return (<div>
+            <Span {...this.props} text={'Hello'} />
+            {/* comentário entre componentes */}
+            <Span {...this.props} text={' World!'} />
+        </div>);
+    }
+});
+
+ReactDOM.render(
+    // comentário ao estilo JavaScript
+    < Hello /* comentário dentro do componente */ name="World" /*
+    comentários de multiplas linhas funcionam também!
+    */ color={'blue'}
+    /> ,
+    document.getElementById('container')
+);
+
+
+1 - comentários entre componentes {/* texto aqui */}
+
+2 - comentários fora e antes de componentes:
+
+render: function() {
+    return ( 
+        // comentário antes do componente contentor...
+        <div>
+
+3 - comentários dentro das tags de componente na mesma linha:
+
+<Hello /* comentário dentro do componente */ name="World" />
+
+
+4 - comentários dentro das tags de componente em linhas multiplas:
+
+<Hello name="World"
+   /*
+      comentários de multiplas linhas funcionam também!
+   */ 
+   color={'blue'}
+/>
